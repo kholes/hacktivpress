@@ -1,5 +1,5 @@
-const model = require('../models/Article')
-class Article {
+const model = require('../models/User')
+class User {
   static getAll(req,res) {
     model.find().then(result => {
       res.send(result)
@@ -47,4 +47,4 @@ class Article {
     })
   }
 }
-module.exports = Article
+module.exports = User

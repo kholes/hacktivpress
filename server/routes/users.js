@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const controllers = require('../controllers/articles')
+const controllers = require('../controllers/users')
 router.get('/', controllers.getAll)
 router.get('/:id', controllers.getById)
 router.post('/', controllers.add)

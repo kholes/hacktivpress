@@ -1,0 +1,10 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+let articles = require('./routes/articles')
+app.use('/articles', articles)
+app.listen(3000, () => {
+  console.log('Ready port 3000')
+})

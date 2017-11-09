@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const app = express()
+var cors = require('cors')
+var app = express()
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 let login = require('./routes/login')
@@ -9,6 +11,6 @@ let articles = require('./routes/articles')
 app.use('/login', login)
 app.use('/users', users)
 app.use('/articles', articles)
-app.listen(3000, () => {
-  console.log('Ready port 3000')
+app.listen(4000, () => {
+  console.log('Ready port 4000')
 })

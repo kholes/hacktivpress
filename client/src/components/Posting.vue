@@ -27,15 +27,8 @@
 <script>
   import { mapActions } from 'vuex'
   export default {
-    data () {
-      category: '',
-      title: '',
-      article: '',
-      author: '',
-      createdAt: new Date()
-    },
     methods: {
-
+      ...mapActions(['newArticle'])
     }
   }
 </script>

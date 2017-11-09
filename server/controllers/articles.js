@@ -1,7 +1,8 @@
 const model = require('../models/Article')
 class Article {
   static getAll(req,res) {
-    model.find().then(result => {
+    model.find()
+    .then(result => {
       res.send(result)
     })
     .catch(err => {
